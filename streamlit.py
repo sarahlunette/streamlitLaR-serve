@@ -16,6 +16,7 @@ df_flow = pd.read_csv('data/df_stations.csv')
 df_nappes = pd.read_csv('data/nappes_data.csv')
 
 #Plot1
+@st.cache_data
 def plot_flow(df):
 
     # Couleurs
@@ -47,6 +48,7 @@ def plot_flow(df):
 
 
 #Plot2
+@st.cache_data
 def plot_groundwater(df):
 
     # Couleurs
@@ -76,7 +78,7 @@ def plot_groundwater(df):
     fig.autofmt_xdate(rotation=45)
     return fig
 
-
+@st.cache_data
 def plot_precipitations(df):
     #Plot3
 
